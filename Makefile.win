@@ -1,0 +1,63 @@
+# Project: 算法演示
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o 查找.o 排序.o 科学计算.o 最短路径.o N皇后问题.o 二叉树.o 最小生成树.o 图的遍历.o 背包问题.o 有期限的作业排序.o 子集和数问题.o $(RES)
+LINKOBJ  = main.o 查找.o 排序.o 科学计算.o 最短路径.o N皇后问题.o 二叉树.o 最小生成树.o 图的遍历.o 背包问题.o 有期限的作业排序.o 子集和数问题.o $(RES)
+LIBS =  -L"D:/工具/Dev-Cpp/lib"  
+INCS =  -I"D:/工具/Dev-Cpp/include" 
+CXXINCS =  -I"D:/工具/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/工具/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/工具/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/工具/Dev-Cpp/include/c++/3.4.2"  -I"D:/工具/Dev-Cpp/include" 
+BIN  = 算法演示.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before 算法演示.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "算法演示.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+查找.o: 查找.cpp
+	$(CPP) -c 查找.cpp -o 查找.o $(CXXFLAGS)
+
+排序.o: 排序.cpp
+	$(CPP) -c 排序.cpp -o 排序.o $(CXXFLAGS)
+
+科学计算.o: 科学计算.cpp
+	$(CPP) -c 科学计算.cpp -o 科学计算.o $(CXXFLAGS)
+
+最短路径.o: 最短路径.cpp
+	$(CPP) -c 最短路径.cpp -o 最短路径.o $(CXXFLAGS)
+
+N皇后问题.o: N皇后问题.cpp
+	$(CPP) -c N皇后问题.cpp -o N皇后问题.o $(CXXFLAGS)
+
+二叉树.o: 二叉树.cpp
+	$(CPP) -c 二叉树.cpp -o 二叉树.o $(CXXFLAGS)
+
+最小生成树.o: 最小生成树.cpp
+	$(CPP) -c 最小生成树.cpp -o 最小生成树.o $(CXXFLAGS)
+
+图的遍历.o: 图的遍历.cpp
+	$(CPP) -c 图的遍历.cpp -o 图的遍历.o $(CXXFLAGS)
+
+背包问题.o: 背包问题.cpp
+	$(CPP) -c 背包问题.cpp -o 背包问题.o $(CXXFLAGS)
+
+有期限的作业排序.o: 有期限的作业排序.cpp
+	$(CPP) -c 有期限的作业排序.cpp -o 有期限的作业排序.o $(CXXFLAGS)
+
+子集和数问题.o: 子集和数问题.cpp
+	$(CPP) -c 子集和数问题.cpp -o 子集和数问题.o $(CXXFLAGS)
